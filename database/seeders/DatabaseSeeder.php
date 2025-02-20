@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Item; // Change from Students to Item
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,11 +13,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        User::factory(1000)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        // Item DB
+        Item::create([
+            'name' => 'Item A', // Change to item name
+            'quantity' => 10,   // Change to item quantity
+            'description' => 'Description for Item A', // Optional description
+        ]);
+        Item::create([
+            'name' => 'Item B', // Change to item name
+            'quantity' => 15,   // Change to item quantity
+            'description' => 'Description for Item B', // Optional description
         ]);
     }
 }
