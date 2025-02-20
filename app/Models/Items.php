@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class Items extends Model // Change class name from Students to Item
+class Items extends Model 
 {
     use Notifiable;
 
