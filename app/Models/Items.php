@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class Items extends Model // Change class name from Students to Item
+class Items extends Model 
 {
     use Notifiable;
 
     protected $fillable = [
         'name',        // Item name
         'quantity',    // Quantity of the item
-        'description', // Optional: Add a description attribute if needed
+        'description', // Optional: Add a description if you wanted to show any discription
     ];
 }

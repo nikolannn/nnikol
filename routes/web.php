@@ -8,4 +8,4 @@ Route::get('/', function () {
 });
 
 // Update the route to use ItemsController
-Route::get('/items-list', [ItemsController::class, 'index']);
+Route::get('/ItemList', [ItemsController::class, 'index']);
