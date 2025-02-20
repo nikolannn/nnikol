@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Item; // Change from Students to Item
+use App\Models\Item; 
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
