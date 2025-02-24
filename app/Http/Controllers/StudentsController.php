@@ -12,7 +12,7 @@ class StudentsController extends Controller
     {
         $students = Students::all();
         $users = User::all();
-        return view('welcome', compact('students', 'users'));
+        return view('Students', compact('students', 'users'));
     }
 
     public function createNewStd(Request $request)

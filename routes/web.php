@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\ItemsController;
+use App\Http\Controllers\StudentsController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('items-list');
-});
+// View
+Route::get('/', [StudentsController::class, 'myWelcomeView'])->name('std.myWelcomeView');
 
-Route::get('/item-list', [ItemsController::class, 'index']);
+// Create
+Route::post('/create', [StudentsController::class, 'createNewStd'])->name('std.createNew');
