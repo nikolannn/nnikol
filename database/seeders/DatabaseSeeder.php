@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\Item; // Change from Students to Item
+use App\Models\Students;
 use App\Models\User;
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,16 +16,25 @@ class DatabaseSeeder extends Seeder
     {
         User::factory(1000)->create();
 
-        // Item DB
-        Item::create([
-            'name' => 'Item A', // Change to item name
-            'quantity' => 10,   // Change to item quantity
-            'description' => 'Description for Item A', // Optional description
+        Students::create([
+            'name' => 'Test User',
+            'age' => 20,
+            'gender' => 'male',
+            'address' => 'Test Address',
         ]);
-        Item::create([
-            'name' => 'Item B', // Change to item name
-            'quantity' => 15,   // Change to item quantity
-            'description' => 'Description for Item B', // Optional description
+
+        Students::create([
+            'name' => 'Test User2',
+            'age' => 25,
+            'gender' => 'female',
+            'address' => 'Test Address2',
+        ]);
+
+        Students::create([
+            'name' => 'Test User3',
+            'age' => 35,
+            'gender' => 'female',
+            'address' => 'Test Address3',
         ]);
     }
 }

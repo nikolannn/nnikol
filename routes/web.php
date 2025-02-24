@@ -1,11 +1,10 @@
 <?php
 
-use App\Http\Controllers\ItemsController; // Change to ItemsController
+use App\Http\Controllers\ItemsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('items-list');
 });
 
-// Update the route to use ItemsController
-Route::get('/ItemList', [ItemsController::class, 'index']);
+Route::get('/item-list', [ItemsController::class, 'index']);
