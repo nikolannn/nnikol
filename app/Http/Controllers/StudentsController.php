@@ -11,7 +11,7 @@ class StudentsController extends Controller
     public function myWelcomeView()
     {
         $students = Students::all();
-        $users = User::all();
+       
         return view('Students', compact('students', 'users'));
     }
 
