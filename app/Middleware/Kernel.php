@@ -45,5 +45,6 @@ class Kernel extends HttpKernel
         // ...existing route middleware...
         'auth' => \App\Http\Middleware\Authenticate::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+        'prevent-back-history' => \App\Http\Middleware\PreventBackHistory::class, // Add this line
     ];
 }
